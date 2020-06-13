@@ -14,8 +14,9 @@
 // The position of the tile that the entity is currently in.
 // Between ticks, each entity animates from this tile to an adjacent tile
 
-struct Position {
-  Pos p;
+struct Position
+{
+    Pos p;
 };
 
 #endif

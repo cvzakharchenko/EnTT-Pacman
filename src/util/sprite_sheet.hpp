@@ -20,23 +20,25 @@
 // This file is temporary.
 // Soon we won't need to parse anything...
 
-struct SpriteRect {
-  Pos min;
-  Pos max;
+struct SpriteRect
+{
+    Pos min;
+    Pos max;
 };
 
-class SpriteSheet {
+class SpriteSheet
+{
 public:
-  explicit SpriteSheet(const std::string &);
-
-  SpriteID lookup(std::string_view) const;
-  SpriteRect get(SpriteID) const;
-  std::uint32_t length() const;
+    explicit SpriteSheet(const std::string&);
+    
+    SpriteID lookup(std::string_view) const;
+    SpriteRect get(SpriteID) const;
+    std::uint32_t length() const;
 
 private:
-  std::unordered_map<std::string, SpriteID> names;
-  std::vector<SpriteRect> rects;
-  std::uint32_t length_;
+    std::unordered_map<std::string, SpriteID> names;
+    std::vector<SpriteRect> rects;
+    std::uint32_t length_;
 };
 
 #endif

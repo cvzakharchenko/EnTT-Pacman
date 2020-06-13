@@ -15,14 +15,16 @@
 // Rendering systems make assumptions about the animation and the
 // layout of frames
 
-struct PlayerSprite {
-  SpriteID id;
+struct PlayerSprite
+{
+    SpriteID id;
 };
 
-struct GhostSprite {
-  SpriteID id;
-  SpriteID scared;
-  SpriteID eyes;
+struct GhostSprite
+{
+    SpriteID id;
+    SpriteID scared;
+    SpriteID eyes;
 };
 
 #endif

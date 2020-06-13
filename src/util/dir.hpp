@@ -11,36 +11,52 @@
 
 #include <cstdint>
 
-// An orthogonal direction
-enum class Dir : std::uint8_t {
-  up,
-  right,
-  down,
-  left,
-  none,
 
-  begin = up,
-  end = none
+// An orthogonal direction
+enum class Dir: std::uint8_t
+{
+    up,
+    right,
+    down,
+    left,
+    none,
+    
+    begin = up,
+    end = none
 };
 
-constexpr Dir opposite(const Dir dir) {
-  switch (dir) {
-    case Dir::up:    return Dir::down;
-    case Dir::right: return Dir::left;
-    case Dir::down:  return Dir::up;
-    case Dir::left:  return Dir::right;
-    default:         return Dir::none;
-  }
+constexpr Dir opposite(const Dir dir)
+{
+    switch (dir)
+    {
+        case Dir::up:
+            return Dir::down;
+        case Dir::right:
+            return Dir::left;
+        case Dir::down:
+            return Dir::up;
+        case Dir::left:
+            return Dir::right;
+        default:
+            return Dir::none;
+    }
 }
 
-constexpr Dir rotateCW(const Dir dir) {
-  switch (dir) {
-    case Dir::up:    return Dir::right;
-    case Dir::right: return Dir::down;
-    case Dir::down:  return Dir::left;
-    case Dir::left:  return Dir::up;
-    default:         return Dir::none;
-  }
+constexpr Dir rotateCW(const Dir dir)
+{
+    switch (dir)
+    {
+        case Dir::up:
+            return Dir::right;
+        case Dir::right:
+            return Dir::down;
+        case Dir::down:
+            return Dir::left;
+        case Dir::left:
+            return Dir::up;
+        default:
+            return Dir::none;
+    }
 }
 
 // Overloading increment and dereference operators to make Dir work as an
@@ -63,22 +79,27 @@ constexpr Dir rotateCW(const Dir dir) {
 //   }
 // }
 
-constexpr Dir &operator++(Dir &dir) {
-  return dir = static_cast<Dir>(static_cast<int>(dir) + 1);
+constexpr Dir& operator++(Dir& dir)
+{
+    return dir = static_cast<Dir>(static_cast<int>(dir) + 1);
 }
 
-constexpr Dir operator*(const Dir dir) {
-  return dir;
+constexpr Dir operator*(const Dir dir)
+{
+    return dir;
 }
 
-struct DirRange {
-  constexpr Dir begin() const {
-    return Dir::begin;
-  }
-
-  constexpr Dir end() const {
-    return Dir::end;
-  }
+struct DirRange
+{
+    constexpr Dir begin() const
+    {
+        return Dir::begin;
+    }
+    
+    constexpr Dir end() const
+    {
+        return Dir::end;
+    }
 };
 
 constexpr DirRange dir_range{};

@@ -19,21 +19,25 @@
 // has a Position component. That's it! Blinky can chase anything
 // that has a Position. We could quite easily make blinky chase inky
 
-struct BlinkyChaseTarget {
-  entt::entity player;
+struct BlinkyChaseTarget
+{
+    entt::entity player;
 };
 
-struct PinkyChaseTarget {
-  entt::entity player;
+struct PinkyChaseTarget
+{
+    entt::entity player;
 };
 
-struct InkyChaseTarget {
-  entt::entity player;
-  entt::entity blinky;
+struct InkyChaseTarget
+{
+    entt::entity player;
+    entt::entity blinky;
 };
 
-struct ClydeChaseTarget {
-  entt::entity player;
+struct ClydeChaseTarget
+{
+    entt::entity player;
 };
 
 #endif

@@ -15,8 +15,9 @@
 // then his target is set to the player position.
 // The pursue_target system will read this target and move the ghost towards it
 
-struct Target {
-  Pos p;
+struct Target
+{
+    Pos p;
 };
 
 #endif

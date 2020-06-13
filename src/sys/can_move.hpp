@@ -16,6 +16,6 @@
 // Checks whether an entity can move in some direction.
 // Deals with ghosts entering and leaving the house
 
-bool canMove(entt::registry &, const MazeState &, entt::entity, Pos, Dir);
+bool canMove(entt::registry&, const MazeState&, entt::entity, Pos, Dir);
 
 #endif

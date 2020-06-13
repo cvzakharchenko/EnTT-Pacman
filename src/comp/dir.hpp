@@ -11,14 +11,17 @@
 
 #include "../util/dir.hpp"
 
+
 // The direction that the entity wants to go
-struct DesiredDir {
-  Dir d = Dir::none;
+struct DesiredDir
+{
+    Dir d = Dir::none;
 };
 
 // The direction that the entity is actually going in
-struct ActualDir {
-  Dir d = Dir::none;
+struct ActualDir
+{
+    Dir d = Dir::none;
 };
 
 #endif

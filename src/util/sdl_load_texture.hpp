@@ -12,10 +12,11 @@
 #include <string>
 #include "sdl_delete.hpp"
 
-namespace SDL {
 
-Texture loadTexture(SDL_Renderer *, std::string);
-
+namespace SDL
+{
+    
+    Texture loadTexture(SDL_Renderer*, std::string);
 }
 
 #endif

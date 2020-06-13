@@ -11,9 +11,11 @@
 
 #include "../util/pos.hpp"
 
-struct HomePosition {
-  Pos home;    // position in the ghost house
-  Pos scatter; // unreachable point in a corner
+
+struct HomePosition
+{
+    Pos home;    // position in the ghost house
+    Pos scatter; // unreachable point in a corner
 };
 
 #endif

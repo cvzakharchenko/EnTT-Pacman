@@ -11,13 +11,16 @@
 
 #include <entt/entity/fwd.hpp>
 
-struct GhostCollision {
-  entt::entity ghost;
-  enum class Type {
-    none, // no collision
-    eat,  // ghost was eaten
-    lose  // player lost
-  } type;
+
+struct GhostCollision
+{
+    entt::entity ghost;
+    enum class Type
+    {
+        none, // no collision
+        eat,  // ghost was eaten
+        lose  // player lost
+    } type;
 };
 
 // Deals with the player colliding with ghosts. If the ghost is in scared mode,
@@ -26,6 +29,6 @@ struct GhostCollision {
 // If the ghost is in scatter or chase mode, the player has lost the game.
 // If the ghost is in eaten mode, the player will pass straight through the ghost
 
-GhostCollision playerGhostCollide(entt::registry &);
+GhostCollision playerGhostCollide(entt::registry&);
 
 #endif

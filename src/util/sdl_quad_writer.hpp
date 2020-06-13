@@ -12,28 +12,30 @@
 #include <SDL_render.h>
 #include "sprite_sheet.hpp"
 
-namespace SDL {
 
-class QuadWriter {
-public:
-  QuadWriter(SDL_Renderer *, SDL_Texture *, const SpriteSheet &);
-
-  void tilePos(Pos, Pos, double = 0.0);
-  void tileTex(SpriteRect);
-  void tileTex(SpriteID);
-
-  void render() const;
-
-private:
-  SDL_Renderer *renderer;
-  SDL_Texture *texture;
-  const SpriteSheet &spritesheet;
-
-  SDL_Rect srcRect;
-  SDL_Rect dstRect;
-  double angle;
-};
-
+namespace SDL
+{
+    
+    class QuadWriter
+    {
+    public:
+        QuadWriter(SDL_Renderer*, SDL_Texture*, const SpriteSheet&);
+        
+        void tilePos(Pos, Pos, double = 0.0);
+        void tileTex(SpriteRect);
+        void tileTex(SpriteID);
+        
+        void render() const;
+    
+    private:
+        SDL_Renderer* renderer;
+        SDL_Texture* texture;
+        const SpriteSheet& spritesheet;
+        
+        SDL_Rect srcRect;
+        SDL_Rect dstRect;
+        double angle;
+    };
 }
 
 #endif

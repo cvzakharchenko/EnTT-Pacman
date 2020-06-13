@@ -12,12 +12,14 @@
 #include <cstdint>
 #include "../util/grid.hpp"
 
-enum class Tile : std::uint8_t {
-  empty,
-  dot,
-  energizer,
-  wall,
-  door
+
+enum class Tile: std::uint8_t
+{
+    empty,
+    dot,
+    energizer,
+    wall,
+    door
 };
 
 using MazeState = Grid<Tile>;

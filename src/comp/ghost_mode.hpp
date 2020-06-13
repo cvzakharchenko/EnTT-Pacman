@@ -19,11 +19,12 @@
 
 struct ChaseMode {};
 struct ScatterMode {};
-struct ScaredMode {
-  // This timer counts down the number of ticks that the ghost is scared for.
-  // Once the timer reaches zero, the ghost enters chase mode. This is handled
-  // by the change_ghost_mode systems
-  int timer = ghostScaredTime;
+struct ScaredMode
+{
+    // This timer counts down the number of ticks that the ghost is scared for.
+    // Once the timer reaches zero, the ghost enters chase mode. This is handled
+    // by the change_ghost_mode systems
+    int timer = ghostScaredTime;
 };
 struct EatenMode {};
 

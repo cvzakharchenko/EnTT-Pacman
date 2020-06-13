@@ -10,6 +10,7 @@
 
 #include <cstdint>
 
+
 using SpriteID = std::uint32_t;
 constexpr SpriteID null_id = ~SpriteID{};
 

@@ -13,7 +13,7 @@
 
 // These systems deal with ghosts entering and leaving the house
 
-void enterHouse(entt::registry &);
-void leaveHouse(entt::registry &);
+void enterHouse(entt::registry&);
+void leaveHouse(entt::registry&);
 
 #endif

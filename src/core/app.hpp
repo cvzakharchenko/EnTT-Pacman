@@ -9,12 +9,13 @@
 #ifndef CORE_APP_HPP
 #define CORE_APP_HPP
 
-class Application {
+class Application
+{
 public:
-  Application();
-  ~Application();
-
-  void run();
+    Application();
+    ~Application();
+    
+    void run();
 };
 
 #endif

@@ -17,14 +17,15 @@
 // Since there is only one input function in this game, we don't really
 // need this but I thought I'd show it anyway.
 
-enum class Consumed {
-  no,
-  yes
+enum class Consumed
+{
+    no,
+    yes
 };
 
 // This takes the scancode of the key that was pressed and sets the DesiredDir
 // of the player.
 
-Consumed playerInput(entt::registry &, SDL_Scancode);
+Consumed playerInput(entt::registry&, SDL_Scancode);
 
 #endif
